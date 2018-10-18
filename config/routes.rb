@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get "center_shousai_1" => "center#center_shousai_1"
   match '/center_shousai_2',    to: 'center#center_shousai_2',    via: 'get'
   #get 'center/center_shousai_2'
-  get 'center/center_shousai_3'
-  
+  #get 'center/center_shousai_3'
+  match '/center_shousai_3',    to: 'center#center_shousai_3',    via: 'get'
  root  'home#home'
  match '/center',    to: 'home#center',    via: 'get'
  match '/izu',    to: 'home#izu',    via: 'get'
