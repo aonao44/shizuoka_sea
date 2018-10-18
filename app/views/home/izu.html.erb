@@ -1,0 +1,20 @@
+<% provide(:title, 'izu') %>
+
+  <div class="main copy-container">
+    <h1>伊豆の海たち</h1>
+    <h2>izu sea</h2>
+  </div>
+
+  <% @izu.each do |izu| %>
+    <div class="contents-item">
+      <p><%= izu.title %></p>
+      <img src=<%= izu.imglink %> alt=<%= izu.title %> class="image">   
+      <p><%= izu.address %></p>
+      <a href=<%= izu.linkpath %> target="_blank" class="link">「<%= izu.title %>」の詳細はこちら</a>
+    </div>
+  <% end %>
+  
+ <div class="pagination">
+  <%= paginate @izu %>
+</div>
+

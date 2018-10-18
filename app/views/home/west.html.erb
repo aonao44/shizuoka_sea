@@ -1,0 +1,19 @@
+<% provide(:title, 'west') %>
+
+  <div class="main copy-container">
+    <h1>西部の海</h1>
+    <h2>west sea</h2>
+  </div>
+
+  <% @west.each do |west| %>
+    <div class="contents-item">
+      <p><%= west.title %></p>
+      <img src=<%= west.imglink %> alt=<%= west.title %> class="image">   
+      <p><%= west.address %></p>
+      <a href=<%= west.linkpath %> target="_blank" class="link">「<%= west.title %>」の詳細はこちら</a>
+    </div>
+  <% end %>
+  
+ <div class="pagination">
+  <%= paginate @west %>
+</div>

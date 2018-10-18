@@ -1,0 +1,2 @@
+class West < ApplicationRecord
+end

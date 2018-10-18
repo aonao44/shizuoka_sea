@@ -1,0 +1,26 @@
+<% provide(:title, 'center') %>
+
+ <div class="main">
+  <div class="main copy-container">
+    <h1>中部の海たち</h1>
+    <h2>center sea</h2>
+ </div>
+
+  <% @center.each do |center| %>
+    <div class="contents-item">
+      <p><%= center.title %></p>
+      <img src=<%= center.imglink %> alt=<%= center.title %> class="image">   
+      <p><%= center.address %></p>
+      <a href=<%= center.linkpath %> target="_blank" class="link">「<%= center.title %>」の詳細はこちら</a>
+      <a href="center_shousai_1">マリンパーク御前崎海水浴場</a>
+      <%= link_to "マリンパーク御前崎海水浴場",    center_shousai_2_path %>
+    </div>
+  <% end %>
+  
+ <div class="pagination">
+  <%= paginate @center %>
+</div>
+
+
+
+ 
